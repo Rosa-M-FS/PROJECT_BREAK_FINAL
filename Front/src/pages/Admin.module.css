@@ -1,0 +1,9 @@
+.adminContainer {  margin: 2rem auto; background: #fff9e6; border-radius: 1rem; padding: 2rem; }
+.form { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+.form input { padding: 0.5rem; border-radius: 0.3rem; border: 1px solid #dab785; }
+.form button { background: #b68910; color: #fff; border: none; border-radius: 0.5rem; padding: 0.5rem 1.2rem; cursor: pointer;}
+.lista { list-style: none; padding: 0; }
+.item { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;}
+.item button { background: #d97336; color: #fff; border: none; border-radius: 0.4rem; padding: 0.3rem 1rem; cursor: pointer; margin-left: 0.5rem;}
+.error { color: #b50000; }
+.mensaje { color: #278d1f; }

@@ -1,0 +1,25 @@
+.tienda {
+    width: 100%;
+    padding: 2rem;
+  }
+  .productosGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .cardLink {
+    text-decoration: none;
+  }
+  .productoCard {
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 1rem;
+    min-width: 220px;
+    background: #fff;
+    transition: box-shadow 0.2s;
+  }
+  .productoCard:hover {
+    box-shadow: 0 0 12px #ffd580;
+  }
+  

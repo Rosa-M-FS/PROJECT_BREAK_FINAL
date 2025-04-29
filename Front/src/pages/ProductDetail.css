@@ -1,0 +1,37 @@
+.detalleContainer {
+
+    margin: 2rem auto;
+    background: #fff8e1;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(184, 135, 11, 0.08);
+    text-align: center;
+  }
+  .nombre {
+    font-size: 2rem;
+    color: #b68910;
+    margin-bottom: 1rem;
+  }
+  .descripcion {
+    color: #8d6e32;
+    margin-bottom: 1.5rem;
+  }
+  .precio {
+    font-size: 1.5rem;
+    color: #a67c00;
+    font-weight: bold;
+  }
+  .addCarrito {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: #b68910;
+    color: #fff;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .addCarrito:hover {
+    background: #e1a800;
+  }

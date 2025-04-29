@@ -1,0 +1,22 @@
+.cardLink {
+    text-decoration: none;
+    display: block;
+    width: 260px;
+  }
+  
+  .productoCard {
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    min-height: 180px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+    margin-bottom: 1rem;
+  }
+  
+  .productoCard:hover {
+    box-shadow: 0 0 12px #ffd580;
+  }
+  
