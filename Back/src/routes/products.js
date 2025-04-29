@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Producto = require("../models/product");
 const { auth, isAdmin } = require("../middlewares/auth");
-
+const multer = require("multer");
+const path = require("path");
 
 router.get("/", async (req, res) => {
   try {
@@ -56,5 +57,21 @@ router.delete("/:id", auth, isAdmin, async (req, res) => {
     res.status(500).json({ msg: "Error al borrar producto", error });
   }
 });
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/"); // carpeta 'uploads' en tu proyecto
+  },
+  filename: function (req, file, cb) {
+    const ext = path.extname(file.originalname);
+    cb(null, Date.now() + ext); // nombre único para cada imagen
+  }
+});
 
+const upload = multer({ storage });
+router.post("/upload", upload.single("imagen"), (req, res) => {
+  if (!req.file) return res.status(400).json({ msg: "No se subió ninguna imagen" });
+  // La URL a la imagen (ajusta si usas Railway o similar)
+  const imageUrl = `/uploads/${req.file.filename}`;
+  res.json({ url: imageUrl });
+});
 module.exports = router;

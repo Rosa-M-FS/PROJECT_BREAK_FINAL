@@ -1,2 +1,63 @@
 # PROJECT_BREAK_FINAL
-Último project break del curso. Completo. Tienda.
+# 🧶 Tienda Artesanal - Project Break
+
+Proyecto Fullstack desarrollado como parte del Sprint 23 y 24.
+
+Una tienda online de productos artesanales, patrones, materiales y cursos donde los usuarios pueden explorar el catálogo, registrarse, iniciar sesión, añadir productos al carrito, gestionar compras y, si son administradores, gestionar el catálogo desde un panel privado.
+
+---
+
+## ✨ Funcionalidades principales
+
+- Registro y login de usuarios
+- Vista de tienda con productos artesanales y búsqueda por categorías
+- Detalle de producto con descripción, imagen y precio
+- Carrito de compra (añadir, quitar, vaciar y finalizar compra simulada)
+- Panel de administración para usuarios admin:
+  - Crear, editar y borrar productos
+  - Subida de imágenes
+- Persistencia de datos con MongoDB (productos, usuarios, etc.)
+- Autenticación JWT (Node.js + Express)
+- Frontend en React con rutas protegidas
+- Estilo responsive y moderno usando CSS Modules
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+- **Frontend:** React, React Router, CSS Modules, Vite
+- **Backend:** Node.js, Express, MongoDB (Mongoose)
+- **Autenticación:** JWT
+- **Subida de imágenes:** Multer
+- **Despliegue:** Netlify/Vercel (frontend), Railway (backend)
+
+---
+
+## 🔒 Usuarios y roles
+
+- **Usuario normal:**
+  - Registrarse / Login
+  - Comprar productos
+  - Ver pedidos (futuro)
+- **Admin:**
+  - Acceso a panel privado (/admin)
+  - Gestión de productos (crear, editar, borrar)
+
+---
+
+## 🧩 Estructura del proyecto
+
+```plaintext
+/Front
+  /src
+    /components
+    /pages
+    /context
+    /services
+    /styles
+/Back
+  /src
+    /models
+    /routes
+    /middlewares
+    index.js
