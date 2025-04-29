@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getProductById } from "../services/api";
 import styles from './ProductDetail';
 import { useCarrito } from "../context/CarritoContext";
+import { useWishlist } from "../context/WishlistContext";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -10,6 +11,7 @@ export default function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const { addToCarrito } = useCarrito();
   const usuario = localStorage.getItem("token");
+  const { toggleWishlist, isInWishlist } = useWishlist();
 
   useEffect(() => {
     getProductById(id)
@@ -19,11 +21,13 @@ export default function ProductDetail() {
 
   if (loading) return <p>Cargando...</p>;
   if (!producto) return <p>No se encontró el producto.</p>;
-  
 
   return (
     <div className={styles.detalleContainer}>
       <h2>{producto.nombre}</h2>
+      <button onClick={() => toggleWishlist(producto)}>
+        {isInWishlist(producto._id) ? "❤️" : "🤍"}
+      </button>
       <p>{producto.descripcion}</p>
       <p><b>        
         {typeof producto.precio === "number"
@@ -43,6 +47,8 @@ export default function ProductDetail() {
           Inicia sesión para comprar
         </p>
       )}
+
     </div>
   );
 }
+

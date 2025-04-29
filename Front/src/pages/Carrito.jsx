@@ -2,6 +2,7 @@ import { useCarrito } from "../context/CarritoContext";
 import { useState } from "react";
 import styles from "./Carrito.module.css";
 
+
 export default function Carrito() {
     const { carrito, removeFromCarrito, clearCarrito } = useCarrito();
     const [compraRealizada, setCompraRealizada] = useState(false);

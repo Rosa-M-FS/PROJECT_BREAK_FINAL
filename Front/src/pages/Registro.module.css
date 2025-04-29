@@ -12,6 +12,7 @@
     flex-direction: column;
     gap: 1.2rem;
   }
+  
   .input {
     padding: 0.75rem;
     border: 1px solid #dab785;

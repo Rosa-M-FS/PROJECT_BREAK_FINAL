@@ -48,21 +48,6 @@ export async function crearProducto(data, isFormData = false) {
   });
 }
 
-
-/* export async function crearProducto(producto) {
-  const token = localStorage.getItem("token");
-  const res = await fetch(`${API_URL}/productos`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`
-    },
-    body: JSON.stringify(producto)
-  });
-  if (!res.ok) throw new Error("Error al crear producto");
-  return await res.json();
-} */
-
 export async function borrarProducto(id) {
   const token = localStorage.getItem("token");
   const res = await fetch(`${API_URL}/productos/${id}`, {
@@ -85,5 +70,23 @@ export async function actualizarProducto(id, producto) {
     body: JSON.stringify(producto)
   });
   if (!res.ok) throw new Error("Error al actualizar producto");
+  return await res.json();
+}
+export async function getCursos() {
+  const res = await fetch(`${API_URL}/cursos`);
+  if (!res.ok) throw new Error("Error al cargar cursos");
+  return await res.json();
+}
+export async function getPedidos() {
+  const token = localStorage.getItem("token");
+  const res = await fetch(`${API_URL}/pedidos`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al cargar pedidos");
+  return await res.json();
+}
+export async function getMateriales() {
+  const res = await fetch(`${API_URL}/materials`);
+  if (!res.ok) throw new Error("Error al cargar materiales");
   return await res.json();
 }

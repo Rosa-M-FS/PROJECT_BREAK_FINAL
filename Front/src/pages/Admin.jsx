@@ -20,7 +20,7 @@ export default function Admin() {
   }, []);
 
   
-function handleImageChange(e) {
+const handleImageChange=(e)=> {
   setImagen(e.target.files[0]);
 }
   

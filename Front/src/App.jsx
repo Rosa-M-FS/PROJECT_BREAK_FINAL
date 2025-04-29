@@ -7,7 +7,10 @@ import Login from './pages/Login';
 import Registro from './pages/Registro';
 import Carrito from './pages/Carrito';
 import Admin from "./pages/Admin";
-
+import Wishlist from "./pages/Wishlist";
+import Cursos from "./pages/Cursos";
+import AdminPedidos from "./pages/AdminPedidos";
+import Materiales from "./pages/Material";
 
 export default function App() {
   return (
@@ -21,6 +24,11 @@ export default function App() {
         <Route path="/registro" element={<Registro />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/admin/pedidos" element={<AdminPedidos />} />
+        <Route path="/materiales" element={<Materiales />} />
+
       </Routes>
     </Router>
   );

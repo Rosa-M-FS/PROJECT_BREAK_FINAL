@@ -9,7 +9,7 @@ export function useCarrito() {
 export function CarritoProvider({ children }) {
   const [carrito, setCarrito] = useState([]);
 
-  function addToCarrito(producto) {
+  const addToCarrito=(producto) =>{
     setCarrito(prev => {
       const existente = prev.find(item => item._id === producto._id);
       if (existente) {
@@ -35,7 +35,7 @@ export function CarritoProvider({ children }) {
     );
   }
 
-  function clearCarrito() {
+ const clearCarrito=()=> {
     setCarrito([]);
   }
 

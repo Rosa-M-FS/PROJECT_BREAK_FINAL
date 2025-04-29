@@ -13,13 +13,14 @@ Una tienda online de productos artesanales, patrones, materiales y cursos donde 
 - Vista de tienda con productos artesanales y búsqueda por categorías
 - Detalle de producto con descripción, imagen y precio
 - Carrito de compra (añadir, quitar, vaciar y finalizar compra simulada)
+- Wishlist
 - Panel de administración para usuarios admin:
   - Crear, editar y borrar productos
   - Subida de imágenes
 - Persistencia de datos con MongoDB (productos, usuarios, etc.)
 - Autenticación JWT (Node.js + Express)
 - Frontend en React con rutas protegidas
-- Estilo responsive y moderno usando CSS Modules
+- Estilo responsive usando CSS Modules
 
 ---
 
@@ -45,6 +46,15 @@ Una tienda online de productos artesanales, patrones, materiales y cursos donde 
 
 ---
 
+## Admin
+rosa@gmail.com
+contraseña:rosa
+## Linea futura
+completar panel admin (pedidos, materiales, cursos pasados, organización agenda)
+
+completar perfil usuario, acceso a pedidos pasados, solicitud de cursos, opcion de solicitar productos elaborados bajo pedido eligiendo entre los materiales disponibles
+
+Perfeccionar adaptación a distintos dispositivos
 ## 🧩 Estructura del proyecto
 
 ```plaintext
@@ -61,3 +71,4 @@ Una tienda online de productos artesanales, patrones, materiales y cursos donde 
     /routes
     /middlewares
     index.js
+

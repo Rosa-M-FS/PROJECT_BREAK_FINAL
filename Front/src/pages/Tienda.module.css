@@ -18,6 +18,7 @@
     min-width: 220px;
     background: #fff;
     transition: box-shadow 0.2s;
+    max-height: 320px;
   }
   .productoCard:hover {
     box-shadow: 0 0 12px #ffd580;
